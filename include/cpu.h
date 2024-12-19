@@ -23,16 +23,21 @@ public:
 	uint8_t W;
 	uint8_t Z;
 
-	// accumulator
-	uint8_t A;
-
 	// program counter
 	uint16_t PC;
 
 	// stack pointer
 	uint16_t SP;
 
-	// flags register
+	/* ALU */
+
+	// accumulator
+	uint8_t ACC;
+	
+	// temporary accumulator
+	uint8_t ACT;
+
+	// flags register (5 bits)
 	uint8_t flags;
 
 	/* Constructors / Destructors */
