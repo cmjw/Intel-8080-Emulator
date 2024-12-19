@@ -27,10 +27,10 @@ public:
 	uint8_t A;
 
 	// program counter
-	uint16_t pc;
+	uint16_t PC;
 
 	// stack pointer
-	uint16_t sp;
+	uint16_t SP;
 
 	// flags register
 	uint8_t flags;
@@ -41,8 +41,8 @@ public:
 
 	/* Functions */
 
-	// reset the CPU state
-	void reset();
+	// reset signal to restore PC state
+	void RESET();
 };
 
 #endif CPU_H

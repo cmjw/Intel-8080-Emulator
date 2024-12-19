@@ -1,7 +1,9 @@
 #include "cpu.h"
 
 int main() {
-	CPU cpu;
+	CPU i8080;
+
+	i8080.RESET();
 
 	return 0;
 }
