@@ -69,6 +69,7 @@
     <NMakeReBuildCommandLine>make clean &amp;&amp; make</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <OutDir>$(SolutionDir)\bin</OutDir>
+    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <NMakeBuildCommandLine>make</NMakeBuildCommandLine>
@@ -77,6 +78,7 @@
     <NMakeReBuildCommandLine>make clean &amp;&amp; make</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <OutDir>$(SolutionDir)\bin</OutDir>
+    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeBuildCommandLine>make</NMakeBuildCommandLine>
@@ -85,6 +87,7 @@
     <NMakeReBuildCommandLine>make clean &amp;&amp; make</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <OutDir>$(SolutionDir)\bin</OutDir>
+    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeBuildCommandLine>make</NMakeBuildCommandLine>
@@ -93,11 +96,16 @@
     <NMakeReBuildCommandLine>make clean &amp;&amp; make</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <OutDir>$(SolutionDir)\bin</OutDir>
+    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\cpu.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cpu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
