@@ -27,12 +27,22 @@ public:
 	uint8_t A;
 
 	// program counter
-	uint16_t PC;
+	uint16_t pc;
 
 	// stack pointer
-	uint16_t SP;
+	uint16_t sp;
 
+	// flags register
+	uint8_t flags;
 
+	/* Constructors / Destructors */
+	CPU();
+	~CPU();
+
+	/* Functions */
+
+	// reset the CPU state
+	void reset();
 };
 
 #endif CPU_H
