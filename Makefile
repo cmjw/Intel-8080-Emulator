@@ -1,5 +1,5 @@
 # Compiler and flags
-CC = gcc
+CC = g++
 CFLAGS = -Wall -Wextra -Iinclude
 LDFLAGS =
 
@@ -10,8 +10,8 @@ OBJDIR = obj
 BINDIR = bin
 
 # Files
-SOURCES := $(wildcard $(SRCDIR)/*.c)
-OBJECTS := $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SOURCES))
+SOURCES := $(wildcard $(SRCDIR)/*.cpp)
+OBJECTS := $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SOURCES))
 TARGET := $(BINDIR)/emulator
 
 # Default rule
@@ -22,7 +22,7 @@ $(TARGET): $(OBJECTS) | $(BINDIR)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Compile
-$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Create directories
