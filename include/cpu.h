@@ -2,6 +2,7 @@
 #define CPU_H
 
 #include <cstdint>
+#include <iostream>
 
 class CPU {
 public:
@@ -48,6 +49,12 @@ public:
 
 	// reset signal to restore PC state
 	void RESET();
+
+	// halt instruction
+	void HALT();
+
+	/* Utilities */
+	void printState();
 };
 
 #endif CPU_H

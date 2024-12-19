@@ -5,5 +5,11 @@ int main() {
 
 	i8080.RESET();
 
+	i8080.printState();
+
+	while (1) {
+
+	}
+
 	return 0;
 }
