@@ -103,6 +103,7 @@
   <ItemGroup>
     <ClCompile Include="src\cpu.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\op.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\cpu.h" />

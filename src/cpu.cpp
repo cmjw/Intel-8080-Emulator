@@ -22,11 +22,6 @@ void CPU::RESET() {
 	PC = 0u;
 }
 
-/* Enter the halt state. */
-void CPU::HALT() {
-
-}
-
 /* Print the processor state. */
 void CPU::printState() {
 	std::cout << "ACC: 0x" << std::hex << (int)ACC << "\n"
